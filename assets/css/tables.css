@@ -1,0 +1,17 @@
+/*      Tables      */
+th
+{
+    background: white;
+}
+td
+{
+    padding: 5px;
+}
+tr:nth-child(EVEN)
+{
+    background: var(--linkHover);
+}
+tr:nth-child(ODD)
+{
+    background: var(--linkColor);
+}

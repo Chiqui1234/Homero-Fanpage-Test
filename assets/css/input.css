@@ -1,0 +1,19 @@
+/*      Input       */
+input, select, button
+{
+    border: none;
+    outline: none;
+    clear: both;
+    margin: 10px 0 0 0;
+}
+textarea
+{
+    outline: none;
+    border: none;
+    min-width: 100%;
+    margin-top: 10px;
+}
+input[type=text]:focus, textarea:focus, input[type=text]:hover, textarea:hover
+{
+    animation-name: heartbeat-anim-homer;animation-duration: 2s;animation-iteration-count: infinite;
+}

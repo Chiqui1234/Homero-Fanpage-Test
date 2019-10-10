@@ -58,42 +58,6 @@ img
     float: left;
     margin: 10px 10px 10px 0;
 }
-/*      Input       */
-input, select, button
-{
-    border: none;
-    outline: none;
-    clear: both;
-    margin: 10px 0 0 0;
-}
-textarea
-{
-    outline: none;
-    border: none;
-    min-width: 100%;
-    margin-top: 10px;
-}
-input[type=text]:focus, textarea:focus, input[type=text]:hover, textarea:hover
-{
-    animation-name: heartbeat-anim-homer;animation-duration: 2s;animation-iteration-count: infinite;
-}
-/*      Tables      */
-th
-{
-    background: white;
-}
-td
-{
-    padding: 5px;
-}
-tr:nth-child(EVEN)
-{
-    background: var(--linkHover);
-}
-tr:nth-child(ODD)
-{
-    background: var(--linkColor);
-}
 /**/
 .homer /* para img de Homero */
 {
@@ -107,6 +71,7 @@ tr:nth-child(ODD)
 .grid-2 {grid-template-columns: repeat(2, 1fr);}
 .grid-4 {grid-template-columns: repeat(4, 1fr);}
 .gap {gap: 10px;}
+/**/
 .fr {width: 1fr;}
 .fullWidth {width: 100vw;}
 .fullHeight {height: 100vh;}
@@ -119,7 +84,7 @@ tr:nth-child(ODD)
 #root
 {
     width: 70%;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 #main /* Portada principal */
 {
@@ -134,24 +99,3 @@ tr:nth-child(ODD)
     display: grid;
     padding: 20px;
 }
-/*        Animaciones       */
-@keyframes heartbeat-anim-homer
-{
-    0% {box-shadow: 0 0 8px var(--homer);}
-    50% {box-shadow: 0 0 8px transparent;}
-    100% {box-shadow: 0 0 8px var(--homer);}
-}
-/*        Responsive        */
-/* @media (max-width: 1279px) {
-    .grid-4 {grid-template-columns: repeat(2, 50%);}
-    .grid-2 {grid-template-columns: 100%;}
-    .removeMobile {display: none;}
-    .textRight {text-align: center;}
-    .readWidth {width: 80%;}
-}
-@media (max-width: 1023px) {
-    .grid-2, .grid-4 {grid-template-columns: calc(100% - 20px);}
-    .removeMobile {display: none;}
-    .textRight {text-align: center;}
-    .readWidth {width: 80%;}
-} */
