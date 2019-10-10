@@ -1,0 +1,157 @@
+*
+{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Lato, Tahoma, Geneva, Verdana, sans-serif;
+}
+:root
+{
+    --linkColor:        #56bedd;
+    --linkHover:        #5c8acf;
+    --sentenceColor:    #494949;
+    --headersColor:     #292929;
+    --homer:            rgb(244, 248, 19);
+    --shadow:           #393939;
+}
+/*      Body        */
+body
+{
+    width: 100%;
+    content: "";
+    display: table;
+    clear: both;
+    margin: -21px 0 0 0; /* hot fix, revisar */
+    padding: 0;
+    overflow-x: hidden;
+}
+/*      Base        */
+h1, h2, h3, h4, h5, h6 {font-family: Tahoma, sans-serif;color: var(--headersColor);}
+p, li
+{
+    margin-top: 10px;
+    line-height: 30px;
+    font-size: 18px;
+    font-family: Roboto, sans-serif;
+    color: var(--sentenceColor);
+}
+ul, ol 
+{
+    width: 100%;
+    float: left;
+    clear: both;
+}
+a 
+{
+    color: var(--linkColor);
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 2px solid var(--linkColor);
+    transition: .5s linear;
+}
+a:hover
+{
+    color: var(--linkHover);
+    border-bottom: 2px solid var(--linkHover);
+}
+img
+{
+    border-radius: 2px;
+    float: left;
+    margin: 10px 10px 10px 0;
+}
+/*      Input       */
+input, select, button
+{
+    border: none;
+    outline: none;
+    clear: both;
+    margin: 10px 0 0 0;
+}
+textarea
+{
+    outline: none;
+    border: none;
+    min-width: 100%;
+    margin-top: 10px;
+}
+input[type=text]:focus, textarea:focus, input[type=text]:hover, textarea:hover
+{
+    animation-name: heartbeat-anim-homer;animation-duration: 2s;animation-iteration-count: infinite;
+}
+/*      Tables      */
+th
+{
+    background: white;
+}
+td
+{
+    padding: 5px;
+}
+tr:nth-child(EVEN)
+{
+    background: var(--linkHover);
+}
+tr:nth-child(ODD)
+{
+    background: var(--linkColor);
+}
+/**/
+.homer /* para img de Homero */
+{
+    box-shadow: 0 0 5px var(--homer);
+    border: 1px solid var(--linkHover);
+}
+/*    Auxiliares    */
+.border {border: 1px solid var(--linkColor);}
+.center {text-align: center;}
+.grid-2, .grid-4 {display: grid;}
+.grid-2 {grid-template-columns: repeat(2, 1fr);}
+.grid-4 {grid-template-columns: repeat(4, 1fr);}
+.gap {gap: 10px;}
+.fr {width: 1fr;}
+.fullWidth {width: 100vw;}
+.fullHeight {height: 100vh;}
+.fullColumn {grid-column: 1 / span 4;}
+.padding {padding: 10px;}
+.rounded {border-radius: 3px;}
+.tenue {width: 100vw;height: 100vh;position: absolute;top: 0;left: 0;background: var(--shadow);opacity: .8;}
+.shadow {box-shadow: 0 0 5px var(--shadow);}
+/*      Estilos     */
+#root
+{
+    width: 70%;
+    margin: 0 auto;
+}
+#main /* Portada principal */
+{
+    margin: 0;
+    padding: 0;
+    background: url('../img/simpsonsMain.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    display: grid;
+    padding: 20px;
+}
+/*        Animaciones       */
+@keyframes heartbeat-anim-homer
+{
+    0% {box-shadow: 0 0 8px var(--homer);}
+    50% {box-shadow: 0 0 8px transparent;}
+    100% {box-shadow: 0 0 8px var(--homer);}
+}
+/*        Responsive        */
+/* @media (max-width: 1279px) {
+    .grid-4 {grid-template-columns: repeat(2, 50%);}
+    .grid-2 {grid-template-columns: 100%;}
+    .removeMobile {display: none;}
+    .textRight {text-align: center;}
+    .readWidth {width: 80%;}
+}
+@media (max-width: 1023px) {
+    .grid-2, .grid-4 {grid-template-columns: calc(100% - 20px);}
+    .removeMobile {display: none;}
+    .textRight {text-align: center;}
+    .readWidth {width: 80%;}
+} */

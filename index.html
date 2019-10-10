@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Testeos cósmicos | Curso Telefónica</title>
+        <!-- Etiquetas META -->
+        <meta name="description" content="Sitio web dedicado a testeos cósmicos para el curso de Telefónica" />
+        <meta name="keywords" content="telefónica, curso, pruebas, test, testing, html, js, angular" />
+        <meta name="author" content="Santiago Agustín Gimenez" />
+        <meta name="copyright" content="MIT License" />
+        <meta name="robots" content="index" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <!-- Meta: Viewport -->
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
+        <!-- Estilos CSS -->
+        <link rel="stylesheet" href="assets/css/main.css" type="text/css" />
+    </head>
+<body>
+<div id="main" class="fullWidth fullHeight">
+    <h2 style="text-align: right;grid-column: 3;grid-row: 1;">Testeos cósmicos</h2>
+</div>
+
+<div id="root" class="grid-2 gap">
+    <h2 class="fullColumn">Curso Telefónica</h1>
+    <div> <!-- Bloque 1 -->
+        <img src="assets/img/homero.jpg" width="100%" class="homer rounded" />
+        <p>Homero es el yankee promedio, <a href="#">según Wikipedia</a>.</p>
+        <ul><h3>Las claves</h3>
+            <li>Homero es papá de tres hijos</li>
+            <li>Homero trabaja en una central nuclear</li>
+            <li>Homero es esposo de Marge</li>
+        </ul>
+        <table><h3>Homero es Homero gracias a </h3> <!-- Tablita -->
+            <!-- tr is table row -->
+            <tr>
+                <td>Marge Simpson</td>
+                <td>Bart Simpson</td>
+                <td>Lisa Simpson</td>
+                <td>Maggie Simpson</td>
+            </tr> 
+            <tr>
+                <td>+40 años</td>
+                <td>~14 años</td>
+                <td>~12 años</td>
+                <td>~2 años</td>
+            </tr>
+            <tr>
+                <td>Ama de casa</td>
+                <td>"Estudiante"</td>
+                <td>Estudiante</td>
+                <td>Bendición</td>
+            </tr>
+        </table>
+    </div> <!-- Cierre Bloque 1 -->
+    <div> <!-- Bloque 2 -->
+        <form action="request.html" method="POST" id="homerForm">
+            <h3 style="margin-top: 10px;">Opiná sobre Homero Simpson, ¡es gratis!</h3>
+            <input type="text" placeholder="Título de tu mensaje" id="title" name="title" class="padding border rounded hearbeat" />
+            <select id="temporadas" class="padding border rounded hearbeat">
+                <option value="t0" class="padding border rounded" disabled>¿Qué temporada te gustó más?</option>
+                <option value="t1">Temporada 1</option>
+                <option value="t1">Temporada 2</option>
+                <option value="t1">Temporada 3</option>
+                <option value="t1">Temporada 4</option>
+                <option value="t1">Temporada 5</option>
+            </select>
+            <textarea placeholder="¿Qué opinás de Homero Simpson?" id="message" name="message" class="padding border rounded hearbeat"></textarea>
+            <button onclick="check()" class="padding border rounded hearbeat">Enviar</button>
+            <button type="button" onclick="clearFields()" class="padding border rounded hearbeat">Borrar</button>
+        </form> <!-- Cierre form #homerForm -->
+    </div> <!-- Cierre Bloque 2 -->
+</div> <!-- Cierre #root -->
+<script>
+    function check()
+    {
+        let title = document.getElementById("title");
+        let message = document.getElementById("message");
+        console.log(title.value);
+        console.log(message.value);
+        alert("console.log terminado.");
+        document.getElementById("homerForm").submit(); // Submit
+    }
+    function clearFields()
+    {
+        let title = document.getElementById("title");
+        let message = document.getElementById("message");
+        title.value = "";
+        message.value = "";
+    }
+</script>
+</body>
+</html>
