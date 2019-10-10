@@ -11,6 +11,7 @@
     --headersColor:     #292929;
     --homer:            rgb(244, 248, 19);
     --shadow:           #393939;
+    --animTime:             .5s;
 }
 /*      Body        */
 body
