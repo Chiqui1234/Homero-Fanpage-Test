@@ -20,7 +20,8 @@ body
     content: "";
     display: table;
     clear: both;
-    margin: -21px 0 0 0; /* hot fix, revisar */
+    /*margin: -21px 0 0 0;*/ /* hot fix, revisar */
+    margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
@@ -98,5 +99,5 @@ img
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     display: grid;
-    padding: 20px;
+    padding: 10px 40px 0 0;
 }
